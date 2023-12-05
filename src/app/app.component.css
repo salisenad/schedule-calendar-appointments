@@ -1,0 +1,57 @@
+
+  .calendar-view, .property-carousel, .property-listing {
+    margin: 1em;
+    background-color: white;
+  }
+  
+
+  .calendar-side-bar {
+    flex: 1 1 25%; 
+  }
+
+  .view-content {
+    flex: 2 1 75%; 
+    border: 1px solid lightgray
+
+  }
+  
+  
+.property-carousel {
+    display: flex;
+}
+
+ 
+ 
+ 
+  
+ 
+ 
+
+  
+
+  
+ 
+  
+
+  
+
+
+
+
+
+
+
+
+
+  
+ 
+  
+
+  
+
+
+
+  
+  
+  /* Additional styles for days-of-week and buttons */
+  

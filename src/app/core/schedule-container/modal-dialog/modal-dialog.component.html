@@ -1,0 +1,61 @@
+<div class="modal-wrapper">
+  <mat-toolbar>
+     <mat-icon color="primary">calendar_today</mat-icon>
+     <span class="date-text">{{ data.details[0].date | date: 'fullDate' }}</span>
+     <span class="spacer"></span>
+     <mat-icon color="primary">access_time</mat-icon>
+     <span class="time-text">{{ time }}:00 — {{ time + 1 }}:00</span>
+     <span class="navigation-icons">
+        <mat-icon color="primary">chevron_left</mat-icon>
+        <mat-icon color="primary">chevron_right</mat-icon>
+     </span>
+  </mat-toolbar>
+  <mat-card color="primary" *ngFor="let appointment of data.details">
+     <div style="padding: 0px 15px 15px 15px">
+        <div class="wrapper-appointment">
+           <div class="flex align-center" style=" gap: 15px;">
+              <img width="20%%" src="https://images.pexels.com/photos/681331/pexels-photo-681331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+              <div>
+                 <p>{{appointment.property.name}}</p>
+                 <p>
+                    {{appointment.property.address.street}} 
+                    {{appointment.property.address.houseNumber}}, 
+                    {{appointment.property.address.zipCode}} 
+                    {{appointment.property.address.city}} 
+                    {{appointment.property.address.country}}
+                 </p>
+              </div>
+           </div>
+           <div class="flex align-center" style="gap: 10px">
+              <img width="45%" src="https://as1.ftcdn.net/v2/jpg/02/43/12/34/1000_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="">
+              <div>
+                 <p>{{appointment.contact.fullName ? appointment.contact.fullName : 'Agent Name'}} </p>
+                 <p>Agent</p>
+              </div>
+           </div>
+        </div>
+        <table class="date-time-status">
+           <tr>
+              <td width="50%" class="flex align-center">
+                 <mat-icon  class="icon-size" color="primary">calendar_today</mat-icon>
+                 <i class="icon date-icon"></i> 10 October 2017
+              </td>
+              <td>
+                 <mat-icon color="primary">access_time</mat-icon>
+                 <i class="icon time-icon"></i> 10:15
+              </td>
+              <td class="status-indicator">
+                 <mat-icon color="primary">person</mat-icon>
+                 {{appointment.attendeeCount}} |{{appointment.maxInviteeCount}}  
+              </td>
+              <td class="status-indicator">
+                 <mat-icon color="primary">more_vert</mat-icon>
+              </td>
+           </tr>
+        </table>
+        <div class="create-viewing-wrapper">
+           <button mat-flat-button class="viewing-btn">+ Create Viewing</button>
+        </div>
+     </div>
+  </mat-card>
+</div>

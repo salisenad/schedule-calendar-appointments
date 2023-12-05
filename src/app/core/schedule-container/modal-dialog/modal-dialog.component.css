@@ -1,0 +1,115 @@
+.modal-wrapper {
+  background-color: #f4f4f4;
+}
+
+mat-toolbar {
+  background: white;
+  color: black; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 13px;
+}
+
+mat-card {
+  background-color: white; margin: 20px
+}
+
+.wrapper-appointment {
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  padding: 10px 0 10px 0;
+  gap: 10px;
+  align-items: center;
+}
+.date-text, .time-text {
+  color: #424242;
+  margin-left: 10px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.navigation-icons mat-icon {
+  padding: 0 10px;
+  color: #424242; 
+}
+
+.example-card {
+  margin-bottom: 8px;
+  margin: 30px;
+}
+
+
+.flex-container  {
+  display: flex;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+}
+
+.flex-container > div {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.icon-size {
+  font-size: 20px;
+}
+
+
+.date-time-status {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd; 
+  border-radius: 4px;
+}
+
+.date-time-status td, .date-time-status th {
+  padding: 14px;
+  border: none;
+}
+
+
+.date-time-status th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.date-time-status tr {
+  border-bottom: 1px solid #ddd; 
+}
+
+.date-time-status tr:last-child {
+  border-bottom: none;
+}
+
+.create-viewing-wrapper {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.viewing-btn {
+  border: none;
+  background: none;
+}

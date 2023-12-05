@@ -1,0 +1,32 @@
+<div class="schedule-container">
+  <div class="calendar-header">
+     <div class="date-range"> {{ weekStart | date: 'd' }} — {{ weekEnd | date: 'd MMMM yyyy' }} </div>
+     <div class="navigation">
+        <span (click)="goToPreviousWeek()">‹</span>
+        <span (click)="goToNextWeek()">›</span>
+     </div>
+  </div>
+  <div class="days-of-week">
+     <div class="day" *ngFor="let day of weekDays" [class.today]="day.isSelected">
+      <div class="date">{{ formatDate(day.date) }}</div>
+      <div class="weekday">{{ day.date | date: 'EEE' }}</div>
+    </div>
+  </div>
+<div class="time-column">
+  <div class="time" *ngFor="let time of times">{{ time }}</div>
+</div>
+<div class="day-columns">
+  <div class="day-column" *ngFor="let day of weekDays">
+     <div *ngFor="let viewing of day.viewings" class="hour-box" [class.scheduled]="viewing.isScheduled">
+     <div class="viewing-details" *ngIf="viewing.isScheduled">
+        <div class="viewing-count" (click)="showAppointments(viewing)">
+           {{ viewing.details.length }} VIEWING{{ viewing.details.length > 1 ? "S" : '' }}
+        </div>
+        <div class="viewing-images" style="display: flex;">
+           <img *ngFor="let detail of viewing.details" class="viewing-image" [src]="detail.image" alt="Viewing Image">
+        </div>
+     </div>
+  </div>
+</div>
+</div>
+</div>

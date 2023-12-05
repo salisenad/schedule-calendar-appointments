@@ -1,0 +1,13 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto auto 1fr;
+
+}
+
+
+::ng-deep .mdc-line-ripple::after {
+  border-bottom-style: none !important;
+}
+
+
